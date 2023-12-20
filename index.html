@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Simplify Your Finances with Split Bill - Effortlessly manage and split expenses with friends, family, or colleagues. No more confusion, just clear and transparent splitting.">
+    <meta name="description"
+        content="Simplify Your Finances with Split Bill - Effortlessly manage and split expenses with friends, family, or colleagues. No more confusion, just clear and transparent splitting.">
 
     <meta name="google-play-app" content="app-id=com.poprigo.splitbill">
 
     <!-- SEO Meta Tags -->
-    <meta name="keywords" content="split bill, expense management, group expenses, finance, financial ease, budgeting, personal finance, payment sharing, expense tracking, financial transparency">
+    <meta name="keywords"
+        content="split bill, expense management, group expenses, finance, financial ease, budgeting, personal finance, payment sharing, expense tracking, financial transparency">
     <meta name="author" content="Ankit Detroja - Poprigo">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Split Bill">
-    <meta property="og:description" content="Effortlessly manage and split expenses with friends, family, or colleagues. No more confusion, just clear and transparent splitting.">
+    <meta property="og:description"
+        content="Effortlessly manage and split expenses with friends, family, or colleagues. No more confusion, just clear and transparent splitting.">
     <meta property="og:image" content="https://poprigo.github.io/splitbill/assets/media/logo.png">
     <meta property="og:url" content="https://poprigo.github.io/splitbill/">
     <meta property="og:type" content="website">
@@ -23,13 +26,70 @@
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Split Bill">
-    <meta name="twitter:description" content="Effortlessly manage and split expenses with friends, family, or colleagues. No more confusion, just clear and transparent splitting.">
+    <meta name="twitter:description"
+        content="Effortlessly manage and split expenses with friends, family, or colleagues. No more confusion, just clear and transparent splitting.">
     <meta name="twitter:image" content="https://poprigo.github.io/splitbill/assets/media/logo.png">
 
     <title>Split Bill</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/media/favicon.png">
+
+    <script type="module">
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import {
+            getAnalytics
+        } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyBwv6jm2QsdwobtQfBHDCR3NsZZ3fdKiuw",
+            authDomain: "split-bill-2bdb7.firebaseapp.com",
+            projectId: "split-bill-2bdb7",
+            storageBucket: "split-bill-2bdb7.appspot.com",
+            messagingSenderId: "816735650390",
+            appId: "1:816735650390:web:d062b58fe7be49a280b1f7",
+            measurementId: "G-3TKMNPT0MG"
+        };
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+
+    <script type="module">
+        function getBrowserInfo() {
+            var ua = navigator.userAgent;
+            var tem;
+            var match = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+
+            if (/trident/i.test(match[1])) {
+                tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+                return 'IE ' + (tem[1] || '');
+            }
+
+            if (match[1] === 'Chrome') {
+                tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+                if (tem != null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+            }
+
+            match = match[2] ? [match[1], match[2]] : [navigator.appName, navigator.appVersion, '-?'];
+
+            if ((tem = ua.match(/version\/(\d+)/i)) != null) match.splice(1, 1, tem[1]);
+
+            return match.join(' ');
+        }
+
+        const googlePlayLink = document.getElementById('googlePlayLink');
+
+        if (googlePlayLink) {
+            googlePlayLink.addEventListener('click', function () {
+                var browserInfo = getBrowserInfo();
+
+                firebase.analytics().logEvent('button_click', {
+                    browser_name: browserInfo
+                });
+            });
+        }
+    </script>
 
     <script type="application/ld+json">
         {
@@ -95,7 +155,8 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
                     <div class="collapse navbar-collapse justify-content-between">
-                        <a class="navbar-brand" href="index.html"><img alt="logo" style="width: 30%;" src="assets/media/logo.png"></a>
+                        <a class="navbar-brand" href="index.html"><img alt="logo" style="width: 30%;"
+                                src="assets/media/logo.png"></a>
                         <ul class="navbar-nav mainmenu">
                             <li class="menu-item"><a href="#banner">Home</a></li>
                             <li class="menu-item"><a href="#about">About</a></li>
@@ -115,8 +176,12 @@
                     <div class="col-lg-6">
                         <div class="content-block">
                             <h1 class="mb-16" style="color: #C3ACD0;">Simplify Your Finances with Split Bill</h1>
-                            <h5 class="lightest-gray mb-64">Effortlessly manage and split expenses with friends, family, or colleagues. No more confusion, just clear and transparent splitting.</h5>
-                            <a style="width: 40%; margin-left: -15px;" target="_blank" href='https://play.google.com/store/apps/details?id=com.poprigo.splitbill&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+                            <h5 class="lightest-gray mb-64">Effortlessly manage and split expenses with friends, family,
+                                or colleagues. No more confusion, just clear and transparent splitting.</h5>
+                            <a id="googlePlayLink" style="width: 40%; margin-left: -15px;" target="_blank"
+                                href='https://play.google.com/store/apps/details?id=com.poprigo.splitbill&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+                                    alt='Get it on Google Play'
+                                    src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -152,11 +217,15 @@
                                 <ul class="unstyled mb-32">
                                     <li class="mb-24">
                                         <h6>1.</h6>
-                                        <h6>Our mission is to simplify the process of managing shared expenses within groups, making it easy for users to keep track of who owes what and settle debts efficiently.</h6>
+                                        <h6>Our mission is to simplify the process of managing shared expenses within
+                                            groups, making it easy for users to keep track of who owes what and settle
+                                            debts efficiently.</h6>
                                     </li>
                                     <li>
                                         <h6>2.</h6>
-                                        <h6>Whether you're managing household expenses, planning a trip, or splitting bills with friends, Split Bill is designed to make your financial interactions smooth and transparent.</h6>
+                                        <h6>Whether you're managing household expenses, planning a trip, or splitting
+                                            bills with friends, Split Bill is designed to make your financial
+                                            interactions smooth and transparent.</h6>
                                     </li>
                                 </ul>
                                 <div class="row">
@@ -203,21 +272,21 @@
                             <div class="step-block">
                                 <h1 class="mb-32">01</h1>
                                 <h4 class="mb-8">Create Group:</h4>
-                                <p>Create an expense group for shared costs with friends.</p><br/>
+                                <p>Create an expense group for shared costs with friends.</p><br />
                             </div>
                         </div>
                         <div class="col-lg-3 mb-24 mb-lg-0">
                             <div class="step-block">
                                 <h1 class="mb-32">02</h1>
                                 <h4 class="mb-8">Add members</h4>
-                                <p>Add members and specify their involvement in bill.</p><br/>
+                                <p>Add members and specify their involvement in bill.</p><br />
                             </div>
                         </div>
                         <div class="col-lg-3 mb-24 mb-lg-0">
                             <div class="step-block">
                                 <h1 class="mb-32">03</h1>
                                 <h4 class="mb-8">Reports</h4>
-                                <p>Financial dynamics with insightful charts and reports.</p><br/>
+                                <p>Financial dynamics with insightful charts and reports.</p><br />
                             </div>
                         </div>
                         <div class="col-lg-3">
@@ -258,7 +327,8 @@
                             </div>
                             <div class="benefit-block mb-24">
                                 <h5 class="mb-16">Conclusion</h5>
-                                <p>Receive a clear summary of financial transactions, making settling debts a breeze.</p>
+                                <p>Receive a clear summary of financial transactions, making settling debts a breeze.
+                                </p>
                             </div>
                             <div class="benefit-block mb-48 mb-lg-0">
                                 <h5 class="mb-16">Export and Share Reports</h5>
@@ -277,9 +347,12 @@
         <!-- Main Content End -->
 
         <div class="container" style="text-align: center; padding: 40px;">
-            <h3 class="mb-24" style="font-family: 'Kalnia';">Take control of your group expenses. Download Split Bill now and experience a new level of financial ease.</h3>
-            <a style="width: 20%; margin: 0px; padding: 0px;" target="_blank" href='https://play.google.com/store/apps/details?id=com.poprigo.splitbill&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-                <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
+            <h3 class="mb-24" style="font-family: 'Kalnia';">Take control of your group expenses. Download Split Bill
+                now and experience a new level of financial ease.</h3>
+            <a style="width: 20%; margin: 0px; padding: 0px;" target="_blank"
+                href='https://play.google.com/store/apps/details?id=com.poprigo.splitbill&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                <img alt='Get it on Google Play'
+                    src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
             </a>
         </div>
 
@@ -289,7 +362,8 @@
                 <script>
                     document.write(new Date().getFullYear())
                 </script>
-                Split Bill. All Rights Reserved.</p>
+                Split Bill. All Rights Reserved.
+            </p>
         </footer>
         <!-- footer Area end -->
 
