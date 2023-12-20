@@ -1,4 +1,4 @@
-<span style="font-family: 'Kalnia';">Split Bill</span>
+# <span style="font-family: 'Kalnia';">Split Bill</span>
 
 ![Split Bill Logo](assets/media/logo.png)
 
@@ -61,9 +61,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 For any inquiries or support, please contact us at:
 
-- Email: support@splitbill.com
+- Email: ankit.detroja.108@gmail.com
 - Phone: +91 9714154356
 
 ---
 
-© [Current Year] Split Bill. All Rights Reserved.
+© <script>document.write(new Date().getFullYear())</script> Split Bill. All Rights Reserved.
