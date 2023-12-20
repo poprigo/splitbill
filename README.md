@@ -1,8 +1,8 @@
-# Split Bill
+# <span style="font-family: 'Kalnia';">Split Bill</span>
 
 ![Split Bill Logo](assets/media/logo.png)
 
-Simplify Your Finances with Split Bill - Effortlessly manage and split expenses with friends, family, or colleagues. No more confusion, just clear and transparent splitting.
+<span style="font-style: italic;">Simplify Your Finances with Split Bill</span> - Effortlessly manage and split expenses with friends, family, or colleagues. No more confusion, just clear and transparent splitting.
 
 [![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.poprigo.splitbill&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
 
@@ -16,9 +16,9 @@ Simplify Your Finances with Split Bill - Effortlessly manage and split expenses 
 - [License](#license)
 - [Contact](#contact)
 
-## Introduction
+## <span style="font-family: 'Kalnia';">Introduction</span>
 
-Welcome to Split Bill, your go-to solution for seamless group expense management. Our mission is to simplify the process of managing shared expenses within groups, making it easy for users to keep track of who owes what and settle debts efficiently.
+Welcome to **Split Bill**, your go-to solution for seamless group expense management. Our mission is to simplify the process of managing shared expenses within groups, making it easy for users to keep track of who owes what and settle debts efficiently.
 
 Whether you're managing household expenses, planning a trip, or splitting bills with friends, Split Bill is designed to make your financial interactions smooth and transparent.
 
