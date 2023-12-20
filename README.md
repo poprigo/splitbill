@@ -1,4 +1,4 @@
-# <span style="font-family: 'Kalnia';">Split Bill</span>
+<span style="font-family: 'Kalnia';">Split Bill</span>
 
 ![Split Bill Logo](assets/media/logo.png)
 
